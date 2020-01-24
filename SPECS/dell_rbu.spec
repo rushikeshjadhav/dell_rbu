@@ -1,8 +1,8 @@
 %define uname  %{kernel_version}
 %define module_dir updates
 
-Summary: Driver for hello-world
-Name: hello-world
+Summary: Driver for dell_rbu
+Name: dell_rbu
 Version: 1.0
 Release: %{?release}%{!?release:1}
 License: GPL
@@ -15,7 +15,7 @@ Requires(post): /usr/sbin/depmod
 Requires(postun): /usr/sbin/depmod
 
 %description
-hello-world Linux Device Driver source.
+dell_rbu Linux Device Driver source.
 
 %prep
 %setup -q -n %{name}-%{version}
@@ -49,5 +49,5 @@ find %{buildroot}/lib/modules/%{uname} -name "*.ko" -type f | xargs chmod u+x
 %doc
 
 %changelog
-* Sat Jan 26 2019 Rushikesh Jadhav <rushikesh7@gmail.com> - 1.0
-- Added example driver hello-world-1.0
+* Fri Jan 24 2020 Rushikesh Jadhav <rushikesh7@gmail.com> - 1.0
+- Added driver dell_rbu-1.0
